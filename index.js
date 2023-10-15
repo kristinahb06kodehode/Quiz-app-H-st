@@ -57,7 +57,9 @@ const questions = [
   },
 ];
 
-/* Variables that store the current question index, the user's score, and references to the HTML elements where the question, answer options, and score are displayed.*/
+/* Variables that store the current question index, the user's score, 
+and references to the HTML elements where the question, 
+answer options, and score are displayed.*/
 let currentQuestion = 0;
 let score = 0;
 
@@ -65,7 +67,8 @@ const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const scoreElement = document.getElementById("score");
 
-/* Function that displays the current question and its answer options on the page. It dynamically generates radio buttons and labels for each answer option */
+/* Function that displays the current question and its answer options on the page.
+ It dynamically generates radio buttons and labels for each answer option */
 function displayQuestion() {
   const question = questions[currentQuestion];
   questionElement.innerText = question.question;
@@ -87,7 +90,10 @@ function displayQuestion() {
   });
 }
 
-/* Function that handles what happens when the user clicks the "next" button. It checks if an option is selected, updates the score, advances to the next question, and handles the end of the quiz. It also resets radio buttons for the next question*/
+/* Function that handles what happens when the user clicks the "next" button.
+ It checks if an option is selected, updates the score, 
+ goes to the next question, and handles the end of the quiz. 
+ It also resets radio buttons for the next question*/
 function nextQuestion() {
   const selectedOption = document.querySelector('input[name="answer"]:checked');
   if (selectedOption) {
@@ -97,7 +103,8 @@ function nextQuestion() {
 
     currentQuestion++;
 
-    /* Checks whether there are more questions to display or if the quiz is completed. If all questions are answered, it displays a completion message and the final score */
+    /* Checks whether there are more questions to display or if the quiz is completed. 
+    If all questions are answered, it displays a completion message and the final score */
     if (currentQuestion < questions.length) {
       displayQuestion();
     } else {

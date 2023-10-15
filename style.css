@@ -26,7 +26,7 @@ body {
 
 .question {
   font-size: 20px;
-  margin: 10px 0; /* Adjusted margin for question */
+  margin: 10px 0;
   color: #755139;
   padding: 15px;
 }
@@ -55,6 +55,6 @@ button:hover {
 
 .score {
   font-size: 18px;
-  margin: 20px 0; /* Adjusted margin for score */
+  margin: 20px 0;
   color: #228b22;
 }
